@@ -1,0 +1,208 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+
+/* 
+If you want to add partials, use Sass Modules via @use:
+@use 'variables';
+
+Usage: partial-name.variable/mixin/function-name:
+background: variables.$primary-color;
+*/
+
+@use 'reset';
+@use 'mixins';
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(46, 48, 50);
+	margin: 0;
+}
+
+/* 2. Content ================================= */
+
+.top-header{
+	background: #DBDADA;
+	height: 3em;
+	// width: auto;
+	position: relative;
+
+	.logo-main{
+		width:100px;
+		height: auto;
+		margin-top: 10px;
+		position: absolute;
+		top:10%;
+		left:3%;
+	}
+	.header-icons{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		img{
+			width: 25px;
+			margin:10px;
+		}
+	}
+	.circle{
+		background-color: #4CBF6A;
+		width: 20px;
+		// height: 25px;
+		text-align: center;
+		border-radius: 50%;
+		color: white;
+		padding: 3px;
+		position: absolute;
+		top: 50%;
+		right: 8%;
+		font-size: 10px;
+	}
+}
+.second-header{
+	background: black;
+	height: 3.8em;
+	position: relative;
+	.logo-geforce{
+		width:200px;
+		height: auto;
+		margin-top: 10px;
+		position: absolute;
+		top: -28%;
+		left: 0%;
+	
+	}
+}
+.side-menu{
+	position: fixed;
+	top: 13%;
+	left: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(94, 94, 94);
+	border-radius: 50%;
+	//box-shadow: 0 0 20px rgba(black,0.2);
+	transition: transform 250ms ease;
+	cursor: pointer;
+	z-index: 200;
+
+	span{
+		position: relative;
+		display: block;
+		width: 50%;
+		height: 2px;
+		background-color: rgb(253, 253, 253);
+		transform-origin: center center;
+		transition: transform 250ms ease;
+		z-index: 200;
+		&:nth-of-type(1) {
+			transform: translateY(-2px);
+		}	
+	}
+}
+#side-menu{
+	display: none;
+	&:checked ~ .menu {
+		background-color: transparent;
+		transform: rotate(360deg);
+		transition: transform 250ms ease;
+
+		span {
+			background-color: white;
+			transition: transform 250ms ease;
+
+			&:nth-of-type(1) {
+				transform: translateY(1px) rotate(45deg);
+			}
+		}	
+	}
+	&:checked ~ .side-nav {
+		left: 0px;
+		// transition: left 500ms ease;
+	}
+	// &:checked ~ main {
+	// 	transform: translateX(250px);
+	// 	transition: transform $base-duration ease;
+	// }
+
+}
+.side-nav {
+	position: fixed;
+	top: 109px;
+	left: -100%;
+	width: 300px;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: rgb(2, 2, 2);
+	// transition: left $base-ease;
+	z-index: 0;
+	
+	ul {
+		position: relative;
+		list-style-type: none;
+		margin: 100px 0;
+		padding: 0;
+
+		li{
+			position: relative;
+			display: block;
+			border-bottom: 5px solid rgba(white,1);
+
+			a{
+				position: relative;
+				display: block;
+				margin: 0;
+				padding: 15px 20px;
+				color: white;
+				font-size: 14px;
+				font-weight: bold;
+				text-decoration: none;
+				text-transform: uppercase;
+
+				&:before {
+					position: absolute;
+					content: '';
+					top: 0;
+					left: 0;
+					width: 0;
+					height: 100%;
+					transition: width 250ms ease;
+					z-index: -1;
+				}
+				&:hover {
+					color: #444;
+					
+					&:before {
+						width: 100%;
+						height: 100%;
+						background-color: rgba(white,1);
+						transition: width 250ms ease;
+					}
+				}
+			}
+		}
+
+	}
+}	
