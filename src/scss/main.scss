@@ -226,7 +226,7 @@ body {
 			padding: 0;
 			display: flex;
 			flex-direction: column;
-			@include mixins.bp-medium{
+			@include mixins.bp-large{
 				display: flex;
 				flex-direction: row;
 				justify-content: space-around;
@@ -238,8 +238,12 @@ body {
 				position: relative;
 				display: block;
 				border-bottom: 5px solid rgba(rgb(41, 132, 155),1);
-				@include mixins.bp-medium{
-					border-bottom:none ;
+				animation-name: borderGlow2;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				@include mixins.bp-large{
+					border-bottom: none ;
+					animation: none;
 					margin-right: 2em;
 					margin-top: .5em;
 				}
@@ -254,7 +258,7 @@ body {
 					font-weight: bold;
 					text-decoration: none;
 					// text-transform: uppercase;
-					@include mixins.bp-medium{
+					@include mixins.bp-large{
 						margin-right: 50px;
 						padding: 0;
 					}
@@ -282,7 +286,7 @@ body {
 							transition: width 350ms ease;
 							z-index: -1;
 						}
-						@include mixins.bp-medium{
+						@include mixins.bp-large{
 							color:rgb(60, 192, 111);
 							background: transparent;
 							transition: ease-in-out .2s;
@@ -299,6 +303,11 @@ body {
 .content-wrapper {
 	display: flex;
 	flex-direction: row;
+	@include mixins.bp-large{
+	
+	
+	}
+	
 }
 
 
@@ -439,13 +448,13 @@ body {
 				
 			}
 	
-			li{
+			.animated-border{
 				position: relative;
 				display: block;
 				border-bottom: 5px solid rgba(rgb(41, 155, 56),1);
-
-				
-	
+				animation-name: borderGlow;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
 				a{
 					position: relative;
 					display: block;
@@ -490,9 +499,17 @@ body {
 
 				}
 				li{
+					margin:5px;
 					border-bottom: none;
+					
 					a{
-						font-size: 12px;
+						font-size: 10px;
+						color: white;
+						text-decoration: none;
+						animation-name: glowingAchorLinks;
+						animation-duration: 5s;
+						animation-iteration-count: infinite;
+						
 					}
 				}
 				.selections{
@@ -505,15 +522,7 @@ body {
 					
 					
 					
-					:root {
-						--color: rebeccapurple;
-					  }
-					input{
-						// margin: 15px;
-						font-size: 2.25rem;
-						color: var(--color);
-						
-					}
+					
 					
 				
 				}
@@ -576,7 +585,9 @@ main{
 		}
 		.msi{
 			background: url("/dist/img/retro1.png");
-
+			img{
+				animation: move1 40s ease infinite;
+			}
 			
 		}
 		.alien{
@@ -586,35 +597,25 @@ main{
 			img{
 				width:350px;
 				margin: 0 auto;
-				
 				margin: 50px 50px;
-				// text-align: center;
-				// position: absolute;
-				// top: 5%;
-				// left:15%;
+				animation: move2 40s ease infinite;
+		
 			}
 		}
 		.razor{
 			background: url("/dist/img/blue.jpeg");
 			img{
-				
-				// text-align: center;
-				
-				// top: 5%;
-				// left:15%;
+				animation: move3 40s ease infinite;
 			}
+			
 		}
 
 		
 		
 		.info{
-			// min-width: 45vw;
+			
 			min-height: 50vh;
 			background: #640f09;
-			
-			// background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
-			// width: 500px;
-			// height: 50vh;
 			padding:5em;
 			@include mixins.bp-large{
 				width: 50%;
@@ -622,12 +623,6 @@ main{
 			
 
 			.squares{
-				// position: absolute;
-				// top: 0;
-				// left: 0;
-				// width: 100%;
-				// height: 67%;
-				// overflow: hidden;
 
 				 li{
 					position: absolute;
@@ -770,6 +765,12 @@ main{
 						border: none;
 						margin:5px;
 						box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+						&:hover{
+							// box-shadow: 0 4px 8px 0 rgba(255, 253, 253, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+							animation-name: glowingButton;
+							animation-duration: 5s;
+							animation-iteration-count: infinite;
+						}
 					}
 					.learn{
 						background: rgb(2, 2, 2);
@@ -818,6 +819,17 @@ footer{
 		font-size: 18px;
 		text-align: center;
 		padding-bottom: 10px;
+		animation-name: glowingSocial;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		.fab{
+			&:hover{
+				transform: rotate(-180deg);
+			}
+		}
+		
+		
+
 		>span{
 			margin-left:5px	
 		}
@@ -838,5 +850,215 @@ footer{
         opacity: 0;
         border-radius: 50%;
     }
+
+}
+@keyframes borderGlow{
+		0% {border-bottom: solid 4px rgb(14, 177, 22);}
+		50% {border-bottom: solid 4px rgb(19, 83, 33);}
+		100% {border-bottom: solid 4px rgb(14, 177, 22);}
+}
+@keyframes borderGlow2{
+	0% {border-bottom: solid 4px rgb(14, 158, 177);}
+	50% {border-bottom: solid 4px rgb(19, 47, 83);}
+	100% {border-bottom: solid 4px rgb(14, 158, 177);}
+}
+@keyframes glowingAchorLinks{
+		0% {color: rgb(136, 230, 140);}
+		50% {color: rgb(56, 99, 65);}
+		100% {color: rgb(136, 230, 140);}
+}
+@keyframes glowingSocial{
+		0% {color: rgb(230, 136, 136);}
+		10% {color: rgb(219, 152, 76);}
+		20%{color: rgb(207, 205, 70);}
+		30%{color: rgb(181, 230, 136);}
+		40%{color: rgb(136, 230, 178);}
+		50% {color: rgb(77, 184, 157);}
+		60% {color: rgb(89, 162, 204);}
+		70% {color: rgb(61, 75, 199);}
+		80% {color: rgb(115, 82, 192);}
+		90% {color: rgb(148, 101, 180);}
+		100% {color: rgb(230, 136, 217);}
+}
+@keyframes glowingButton{
+	0% {box-shadow: 0 4px 8px 0 rgba(241, 67, 67, 0.6), 0 6px 20px 0 rgba(212, 29, 29, 0.6);}
+	10% {box-shadow: 0 4px 8px 0 rgba(212, 120, 33, 0.6), 0 6px 20px 0 rgba(151, 63, 11, 0.6);}
+	20%{box-shadow: 0 4px 8px 0 rgba(175, 154, 34, 0.6), 0 6px 20px 0 rgba(189, 171, 12, 0.6);}
+	30%{box-shadow: 0 4px 8px 0 rgba(119, 168, 40, 0.6), 0 6px 20px 0 rgba(47, 102, 10, 0.6);}
+	40%{box-shadow: 0 4px 8px 0 rgba(59, 119, 74, 0.6), 0 6px 20px 0 rgba(11, 121, 84, 0.6);}
+	50% {box-shadow: 0 4px 8px 0 rgba(67, 148, 134, 0.6), 0 6px 20px 0 rgba(8, 153, 134, 0.6);}
+	60% {box-shadow: 0 4px 8px 0 rgba(74, 139, 192, 0.6), 0 6px 20px 0 rgba(7, 120, 185, 0.6);}
+	70% {box-shadow: 0 4px 8px 0 rgba(61, 70, 153, 0.6), 0 6px 20px 0 rgba(10, 16, 100, 0.6);}
+	80% {box-shadow: 0 4px 8px 0 rgba(117, 84, 168, 0.6), 0 6px 20px 0 rgba(69, 10, 124, 0.6);}
+	90% {box-shadow: 0 4px 8px 0 rgba(130, 71, 138, 0.6), 0 6px 20px 0 rgba(189, 29, 189, 0.6);}
+	100% {box-shadow: 0 4px 8px 0 rgba(150, 82, 116, 0.6), 0 6px 20px 0 rgba(201, 6, 97, 0.6);}
+}
+
+@keyframes move1{
+	0%{
+		transform-origin: bottom left;
+		transform: scale(1.5);
+	}	
+	12%{
+		transform-origin: top right;
+		transform: scale(1.2);
+	}
+	18%{
+		transform-origin: left;
+		transform: scale(1.6);
+	}
+	25%{
+		transform-origin: top left;
+		transform: scale(1.3);
+	}
+	30%{
+		transform-origin: bottom;
+		transform: scale(1.4);
+	}
+	38%{
+		transform-origin: top right;
+		transform: scale(1.7);
+	}
+	50%{
+		transform-origin: left;
+		transform: scale(1.2);
+	}
+	66%{
+		transform-origin: bottom left;
+		transform: scale(1.5);
+	}	
+	73%{
+		transform-origin: top right;
+		transform: scale(1.2);
+	}
+	80%{
+		transform-origin: left;
+		transform: scale(1.6);
+	}
+	88%{
+		transform-origin: top left;
+		transform: scale(1.3);
+	}
+	95%{
+		transform-origin: bottom;
+		transform: scale(1.4);
+	}
+	100%{
+		transform-origin: top right;
+		transform: scale(1.7);
+	}
+	
+
+}
+@keyframes move2{
+	0%{
+		transform-origin: bottom left;
+		transform: scale(1.5);
+	}	
+	12%{
+		transform-origin: top right;
+		transform: scale(1.2);
+	}
+	18%{
+		transform-origin: left;
+		transform: scale(1.6);
+	}
+	25%{
+		transform-origin: top left;
+		transform: scale(1.3);
+	}
+	30%{
+		transform-origin: bottom;
+		transform: scale(1.4);
+	}
+	38%{
+		transform-origin: top right;
+		transform: scale(1.7);
+	}
+	50%{
+		transform-origin: left;
+		transform: scale(1.2);
+	}
+	66%{
+		transform-origin: bottom left;
+		transform: scale(1.5);
+	}	
+	73%{
+		transform-origin: top right;
+		transform: scale(1.2);
+	}
+	80%{
+		transform-origin: left;
+		transform: scale(1.6);
+	}
+	88%{
+		transform-origin: top left;
+		transform: scale(1.3);
+	}
+	95%{
+		transform-origin: bottom;
+		transform: scale(1.4);
+	}
+	100%{
+		transform-origin: top right;
+		transform: scale(1.7);
+	}
+	
+
+}
+@keyframes move3{
+	0%{
+		transform-origin: bottom left;
+		transform: scale(1.5);
+	}	
+	12%{
+		transform-origin: top right;
+		transform: scale(1.2);
+	}
+	18%{
+		transform-origin: left;
+		transform: scale(1.6);
+	}
+	25%{
+		transform-origin: top left;
+		transform: scale(1.3);
+	}
+	30%{
+		transform-origin: bottom;
+		transform: scale(1.4);
+	}
+	38%{
+		transform-origin: top right;
+		transform: scale(1.7);
+	}
+	50%{
+		transform-origin: left;
+		transform: scale(1.2);
+	}
+	66%{
+		transform-origin: bottom left;
+		transform: scale(1.5);
+	}	
+	73%{
+		transform-origin: top right;
+		transform: scale(1.2);
+	}
+	80%{
+		transform-origin: left;
+		transform: scale(1.6);
+	}
+	88%{
+		transform-origin: top left;
+		transform: scale(1.3);
+	}
+	95%{
+		transform-origin: bottom;
+		transform: scale(1.4);
+	}
+	100%{
+		transform-origin: top right;
+		transform: scale(1.7);
+	}
+	
 
 }
