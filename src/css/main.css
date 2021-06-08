@@ -249,22 +249,19 @@ body {
   width: 50%;
   height: 2px;
   background-color: white;
-  -ms-transform-origin: center center;
-      transform-origin: center center;
+  transform-origin: center center;
   transition: transform 250ms ease;
   z-index: 200;
 }
 .second-header .second-header-menu span:nth-of-type(1) {
-  -ms-transform: translateY(-5px);
-      transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 .second-header #second-header-menu {
   display: none;
 }
 .second-header #second-header-menu:checked ~ .menu {
   background-color: transparent;
-  -ms-transform: rotate(360deg);
-      transform: rotate(360deg);
+  transform: rotate(360deg);
   transition: transform 250ms ease;
 }
 .second-header #second-header-menu:checked ~ .menu span {
@@ -272,12 +269,10 @@ body {
   transition: transform 250ms ease;
 }
 .second-header #second-header-menu:checked ~ .menu span:nth-of-type(1) {
-  -ms-transform: translateY(20px) rotate(45deg);
-      transform: translateY(20px) rotate(45deg);
+  transform: translateY(20px) rotate(45deg);
 }
 .second-header #second-header-menu:checked ~ .menu span:nth-of-type(2) {
-  -ms-transform: translateY(20px) rotate(-45deg);
-      transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
 }
 @media screen and (min-width: 992px) {
   .second-header #second-header-menu:checked ~ .menu {
@@ -293,14 +288,12 @@ body {
   transition: left 500ms ease;
 }
 .second-header #second-header-menu:checked ~ .second-header-menu span:nth-child(1) {
-  -ms-transform: translateY(15px) rotate(-405deg);
-      transform: translateY(15px) rotate(-405deg);
+  transform: translateY(15px) rotate(-405deg);
   position: absolute;
   top: 20%;
 }
 .second-header #second-header-menu:checked ~ .second-header-menu span:nth-child(2) {
-  -ms-transform: rotate(405deg);
-      transform: rotate(405deg);
+  transform: rotate(405deg);
 }
 .second-header #second-header-menu:not(:checked) ~ .second-header-nav {
   left: 350%;
@@ -354,18 +347,14 @@ body {
   position: relative;
   display: block;
   border-bottom: 5px solid #29849b;
-  -webkit-animation-name: borderGlow2;
-          animation-name: borderGlow2;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: borderGlow2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 @media screen and (min-width: 992px) {
   .second-header .second-header-nav ul li {
     border-bottom: none;
-    -webkit-animation: none;
-            animation: none;
+    animation: none;
     margin-right: 2em;
     margin-top: 0.5em;
   }
@@ -454,22 +443,19 @@ body {
   width: 50%;
   height: 2px;
   background-color: black;
-  -ms-transform-origin: center center;
-      transform-origin: center center;
+  transform-origin: center center;
   transition: transform 250ms ease;
   z-index: 200;
 }
 .side-bar .side-menu span:nth-of-type(1) {
-  -ms-transform: translateY(2px) rotate(90deg);
-      transform: translateY(2px) rotate(90deg);
+  transform: translateY(2px) rotate(90deg);
 }
 .side-bar #side-menu {
   display: none;
 }
 .side-bar #side-menu:checked ~ .menu {
   background-color: transparent;
-  -ms-transform: rotate(360deg);
-      transform: rotate(360deg);
+  transform: rotate(360deg);
   transition: transform 250ms ease;
 }
 .side-bar #side-menu:checked ~ .menu span {
@@ -477,42 +463,36 @@ body {
   transition: transform 250ms ease;
 }
 .side-bar #side-menu:checked ~ .menu span:nth-of-type(1) {
-  -ms-transform: translateY(20px) rotate(45deg);
-      transform: translateY(20px) rotate(45deg);
+  transform: translateY(20px) rotate(45deg);
 }
 .side-bar #side-menu:checked ~ .side-nav {
   left: 0%;
   transition: left 500ms ease;
 }
 .side-bar #side-menu:checked ~ .side-nav span:nth-child(1) {
-  -ms-transform: translateY(15px) rotate(-405deg);
-      transform: translateY(15px) rotate(-405deg);
+  transform: translateY(15px) rotate(-405deg);
 }
 .side-bar #side-menu:checked ~ .side-nav span:nth-child(2) {
-  -ms-transform: rotate(405deg);
-      transform: rotate(405deg);
+  transform: rotate(405deg);
 }
 .side-bar #side-menu:checked ~ .side-menu {
   left: 5%;
   transition: left 500ms ease;
 }
 .side-bar #side-menu:checked ~ .side-menu span:nth-child(1) {
-  -ms-transform: translateY(15px) rotate(-405deg);
-      transform: translateY(15px) rotate(-405deg);
+  transform: translateY(15px) rotate(-405deg);
   position: absolute;
   top: 20%;
 }
 .side-bar #side-menu:checked ~ .side-menu span:nth-child(2) {
-  -ms-transform: rotate(405deg);
-      transform: rotate(405deg);
+  transform: rotate(405deg);
 }
 .side-bar #side-menu:not(:checked) ~ .side-nav {
   left: -100%;
   transition: left 500ms ease;
 }
 .side-bar #side-menu:not(:checked) ~ .side-nav span:nth-of-type(1) {
-  -ms-transform: translateY(20px) rotate(135deg);
-      transform: translateY(20px) rotate(135deg);
+  transform: translateY(20px) rotate(135deg);
 }
 .side-bar .side-nav {
   position: absolute;
@@ -546,12 +526,9 @@ body {
   position: relative;
   display: block;
   border-bottom: 5px solid #299b38;
-  -webkit-animation-name: borderGlow;
-          animation-name: borderGlow;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: borderGlow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 .side-bar .side-nav ul .animated-border a {
   position: relative;
@@ -596,12 +573,9 @@ body {
   font-size: 10px;
   color: white;
   text-decoration: none;
-  -webkit-animation-name: glowingAchorLinks;
-          animation-name: glowingAchorLinks;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: glowingAchorLinks;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 .side-bar .side-nav ul .selections-ul .selections {
   display: flex;
@@ -617,6 +591,7 @@ main {
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  flex-grow: 1;
 }
 @media screen and (min-width: 992px) {
   main {
@@ -660,8 +635,7 @@ main .computer .msi {
   background: url("/dist/img/retro1.png");
 }
 main .computer .msi img {
-  -webkit-animation: move1 40s ease infinite;
-          animation: move1 40s ease infinite;
+  animation: move1 40s ease infinite;
 }
 main .computer .alien {
   background: url("/dist/img/green.jpeg");
@@ -671,15 +645,13 @@ main .computer .alien img {
   width: 350px;
   margin: 0 auto;
   margin: 50px 50px;
-  -webkit-animation: move2 40s ease infinite;
-          animation: move2 40s ease infinite;
+  animation: move2 40s ease infinite;
 }
 main .computer .razor {
   background: url("/dist/img/blue.jpeg");
 }
 main .computer .razor img {
-  -webkit-animation: move3 40s ease infinite;
-          animation: move3 40s ease infinite;
+  animation: move3 40s ease infinite;
 }
 main .computer .info {
   min-height: 50vh;
@@ -698,89 +670,73 @@ main .computer .info .squares li {
   width: 10px;
   height: 20px;
   background: rgba(20, 18, 18, 0.212);
-  -webkit-animation: animate 25s linear infinite;
-          animation: animate 25s linear infinite;
+  animation: animate 25s linear infinite;
   bottom: -70%;
 }
 main .computer .info .squares li:nth-child(1) {
   left: 25%;
   width: 80px;
   height: 80px;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
 }
 main .computer .info .squares li:nth-child(2) {
   left: 10%;
   width: 20px;
   height: 20px;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-duration: 12s;
-          animation-duration: 12s;
+  animation-delay: 2s;
+  animation-duration: 12s;
 }
 main .computer .info .squares li:nth-child(3) {
   left: 70%;
   width: 20px;
   height: 20px;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  animation-delay: 4s;
 }
 main .computer .info .squares li:nth-child(4) {
   left: 40%;
   width: 60px;
   height: 60px;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-duration: 18s;
-          animation-duration: 18s;
+  animation-delay: 0s;
+  animation-duration: 18s;
 }
 main .computer .info .squares li:nth-child(5) {
   left: 65%;
   width: 20px;
   height: 20px;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
 }
 main .computer .info .squares li:nth-child(6) {
   left: 75%;
   width: 110px;
   height: 110px;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation-delay: 3s;
 }
 main .computer .info .squares li:nth-child(7) {
   left: 35%;
   width: 150px;
   height: 150px;
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
+  animation-delay: 7s;
 }
 main .computer .info .squares li:nth-child(8) {
   left: 50%;
   width: 25px;
   height: 25px;
-  -webkit-animation-delay: 15s;
-          animation-delay: 15s;
-  -webkit-animation-duration: 45s;
-          animation-duration: 45s;
+  animation-delay: 15s;
+  animation-duration: 45s;
 }
 main .computer .info .squares li:nth-child(9) {
   left: 20%;
   width: 15px;
   height: 15px;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-duration: 35s;
-          animation-duration: 35s;
+  animation-delay: 2s;
+  animation-duration: 35s;
 }
 main .computer .info .squares li:nth-child(10) {
   left: 85%;
   width: 150px;
   height: 150px;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-duration: 11s;
-          animation-duration: 11s;
+  animation-delay: 0s;
+  animation-duration: 11s;
 }
 main .computer .info .specs {
   color: white;
@@ -828,12 +784,9 @@ main .computer .info .specs .button-container .button {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 main .computer .info .specs .button-container .button:hover {
-  -webkit-animation-name: glowingButton;
-          animation-name: glowingButton;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: glowingButton;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 main .computer .info .specs .button-container .learn {
   background: #020202;
@@ -876,32 +829,15 @@ footer .social {
   font-size: 18px;
   text-align: center;
   padding-bottom: 10px;
-  -webkit-animation-name: glowingSocial;
-          animation-name: glowingSocial;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: glowingSocial;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 footer .social .fab:hover {
-  -ms-transform: rotate(-180deg);
-      transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 footer .social > span {
   margin-left: 5px;
-}
-
-@-webkit-keyframes animate {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
-  }
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
-  }
 }
 
 @keyframes animate {
@@ -916,17 +852,6 @@ footer .social > span {
     border-radius: 50%;
   }
 }
-@-webkit-keyframes borderGlow {
-  0% {
-    border-bottom: solid 4px #0eb116;
-  }
-  50% {
-    border-bottom: solid 4px #135321;
-  }
-  100% {
-    border-bottom: solid 4px #0eb116;
-  }
-}
 @keyframes borderGlow {
   0% {
     border-bottom: solid 4px #0eb116;
@@ -936,17 +861,6 @@ footer .social > span {
   }
   100% {
     border-bottom: solid 4px #0eb116;
-  }
-}
-@-webkit-keyframes borderGlow2 {
-  0% {
-    border-bottom: solid 4px #0e9eb1;
-  }
-  50% {
-    border-bottom: solid 4px #132f53;
-  }
-  100% {
-    border-bottom: solid 4px #0e9eb1;
   }
 }
 @keyframes borderGlow2 {
@@ -960,17 +874,6 @@ footer .social > span {
     border-bottom: solid 4px #0e9eb1;
   }
 }
-@-webkit-keyframes glowingAchorLinks {
-  0% {
-    color: #88e68c;
-  }
-  50% {
-    color: #386341;
-  }
-  100% {
-    color: #88e68c;
-  }
-}
 @keyframes glowingAchorLinks {
   0% {
     color: #88e68c;
@@ -980,41 +883,6 @@ footer .social > span {
   }
   100% {
     color: #88e68c;
-  }
-}
-@-webkit-keyframes glowingSocial {
-  0% {
-    color: #e68888;
-  }
-  10% {
-    color: #db984c;
-  }
-  20% {
-    color: #cfcd46;
-  }
-  30% {
-    color: #b5e688;
-  }
-  40% {
-    color: #88e6b2;
-  }
-  50% {
-    color: #4db89d;
-  }
-  60% {
-    color: #59a2cc;
-  }
-  70% {
-    color: #3d4bc7;
-  }
-  80% {
-    color: #7352c0;
-  }
-  90% {
-    color: #9465b4;
-  }
-  100% {
-    color: #e688d9;
   }
 }
 @keyframes glowingSocial {
@@ -1052,41 +920,6 @@ footer .social > span {
     color: #e688d9;
   }
 }
-@-webkit-keyframes glowingButton {
-  0% {
-    box-shadow: 0 4px 8px 0 rgba(241, 67, 67, 0.6), 0 6px 20px 0 rgba(212, 29, 29, 0.6);
-  }
-  10% {
-    box-shadow: 0 4px 8px 0 rgba(212, 120, 33, 0.6), 0 6px 20px 0 rgba(151, 63, 11, 0.6);
-  }
-  20% {
-    box-shadow: 0 4px 8px 0 rgba(175, 154, 34, 0.6), 0 6px 20px 0 rgba(189, 171, 12, 0.6);
-  }
-  30% {
-    box-shadow: 0 4px 8px 0 rgba(119, 168, 40, 0.6), 0 6px 20px 0 rgba(47, 102, 10, 0.6);
-  }
-  40% {
-    box-shadow: 0 4px 8px 0 rgba(59, 119, 74, 0.6), 0 6px 20px 0 rgba(11, 121, 84, 0.6);
-  }
-  50% {
-    box-shadow: 0 4px 8px 0 rgba(67, 148, 134, 0.6), 0 6px 20px 0 rgba(8, 153, 134, 0.6);
-  }
-  60% {
-    box-shadow: 0 4px 8px 0 rgba(74, 139, 192, 0.6), 0 6px 20px 0 rgba(7, 120, 185, 0.6);
-  }
-  70% {
-    box-shadow: 0 4px 8px 0 rgba(61, 70, 153, 0.6), 0 6px 20px 0 rgba(10, 16, 100, 0.6);
-  }
-  80% {
-    box-shadow: 0 4px 8px 0 rgba(117, 84, 168, 0.6), 0 6px 20px 0 rgba(69, 10, 124, 0.6);
-  }
-  90% {
-    box-shadow: 0 4px 8px 0 rgba(130, 71, 138, 0.6), 0 6px 20px 0 rgba(189, 29, 189, 0.6);
-  }
-  100% {
-    box-shadow: 0 4px 8px 0 rgba(150, 82, 116, 0.6), 0 6px 20px 0 rgba(201, 6, 97, 0.6);
-  }
-}
 @keyframes glowingButton {
   0% {
     box-shadow: 0 4px 8px 0 rgba(241, 67, 67, 0.6), 0 6px 20px 0 rgba(212, 29, 29, 0.6);
@@ -1120,60 +953,6 @@ footer .social > span {
   }
   100% {
     box-shadow: 0 4px 8px 0 rgba(150, 82, 116, 0.6), 0 6px 20px 0 rgba(201, 6, 97, 0.6);
-  }
-}
-@-webkit-keyframes move1 {
-  0% {
-    transform-origin: bottom left;
-    transform: scale(1.55);
-  }
-  12% {
-    transform-origin: top right;
-    transform: scale(1.12);
-  }
-  18% {
-    transform-origin: left;
-    transform: scale(1.16);
-  }
-  25% {
-    transform-origin: top left;
-    transform: scale(1.33);
-  }
-  30% {
-    transform-origin: bottom;
-    transform: scale(1.14);
-  }
-  38% {
-    transform-origin: top right;
-    transform: scale(1.97);
-  }
-  50% {
-    transform-origin: left;
-    transform: scale(1.12);
-  }
-  66% {
-    transform-origin: bottom left;
-    transform: scale(1.55);
-  }
-  73% {
-    transform-origin: top right;
-    transform: scale(1.12);
-  }
-  80% {
-    transform-origin: left;
-    transform: scale(1.16);
-  }
-  88% {
-    transform-origin: top left;
-    transform: scale(1.13);
-  }
-  95% {
-    transform-origin: bottom;
-    transform: scale(1.64);
-  }
-  100% {
-    transform-origin: top right;
-    transform: scale(1.57);
   }
 }
 @keyframes move1 {
@@ -1230,60 +1009,6 @@ footer .social > span {
     transform: scale(1.57);
   }
 }
-@-webkit-keyframes move2 {
-  0% {
-    transform-origin: bottom right;
-    transform: scale(1.51);
-  }
-  12% {
-    transform-origin: bottom right;
-    transform: scale(1.19);
-  }
-  18% {
-    transform-origin: top left;
-    transform: scale(1.46);
-  }
-  25% {
-    transform-origin: top;
-    transform: scale(1.13);
-  }
-  30% {
-    transform-origin: bottom;
-    transform: scale(1.2);
-  }
-  38% {
-    transform-origin: bottom right;
-    transform: scale(1.36);
-  }
-  50% {
-    transform-origin: left;
-    transform: scale(1.2);
-  }
-  66% {
-    transform-origin: bottom left;
-    transform: scale(1.15);
-  }
-  73% {
-    transform-origin: top left;
-    transform: scale(1.62);
-  }
-  80% {
-    transform-origin: bottom right;
-    transform: scale(1.36);
-  }
-  88% {
-    transform-origin: bottom left;
-    transform: scale(1.13);
-  }
-  95% {
-    transform-origin: top left;
-    transform: scale(1.49);
-  }
-  100% {
-    transform-origin: left;
-    transform: scale(1.15);
-  }
-}
 @keyframes move2 {
   0% {
     transform-origin: bottom right;
@@ -1336,60 +1061,6 @@ footer .social > span {
   100% {
     transform-origin: left;
     transform: scale(1.15);
-  }
-}
-@-webkit-keyframes move3 {
-  0% {
-    transform-origin: right;
-    transform: scale(1.55);
-  }
-  12% {
-    transform-origin: bottom left;
-    transform: scale(1.12);
-  }
-  18% {
-    transform-origin: right;
-    transform: scale(1.36);
-  }
-  25% {
-    transform-origin: top left;
-    transform: scale(1.33);
-  }
-  30% {
-    transform-origin: bottom;
-    transform: scale(1.14);
-  }
-  38% {
-    transform-origin: top right;
-    transform: scale(1.67);
-  }
-  50% {
-    transform-origin: left;
-    transform: scale(1.12);
-  }
-  66% {
-    transform-origin: bottom left;
-    transform: scale(1.55);
-  }
-  73% {
-    transform-origin: bottom right;
-    transform: scale(1.12);
-  }
-  80% {
-    transform-origin: left;
-    transform: scale(1.16);
-  }
-  88% {
-    transform-origin: top left;
-    transform: scale(1.13);
-  }
-  95% {
-    transform-origin: top;
-    transform: scale(1.44);
-  }
-  100% {
-    transform-origin: bottom right;
-    transform: scale(1.37);
   }
 }
 @keyframes move3 {
@@ -1446,4 +1117,3 @@ footer .social > span {
     transform: scale(1.37);
   }
 }
-/*# sourceMappingURL=main.css.map */
