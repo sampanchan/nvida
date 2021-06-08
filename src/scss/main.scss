@@ -532,11 +532,12 @@ body {
 	}	
 }
 main{
+	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	overflow: hidden;
-	flex-grow: 1;
+	
 	
 
 	@include mixins.bp-large{
